@@ -1,0 +1,10 @@
+<div class="modal modal-open">
+    <div class="modal-box">
+        <div class="modal-action text-center justify-center">
+            <button *ngIf="(state$ | async) === 'idle'; else joining" class="btn" (click)="joinGame()">Wyszukaj grę</button>
+            <ng-template #joining>
+                <span class="text-center text-xl text-white">Oczekiwanie na grę...</span>
+            </ng-template>
+        </div>
+    </div>
+</div>

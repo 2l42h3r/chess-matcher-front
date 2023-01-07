@@ -1,0 +1,4 @@
+<div class="text-center">
+<ngx-chess-board [size]="600" #board [showLegalMoves]="true" [lightDisabled]="side === 'black'" [darkDisabled]="side === 'white'" (moveChange)="moveChangeHandler($event)" [freeMode]="false"></ngx-chess-board>
+<div class="text-white text-xl">Grasz jako: {{side === 'white' ? 'Białe' : 'Czarne'}}</div>
+</div>
