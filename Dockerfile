@@ -7,6 +7,7 @@ COPY . .
 RUN npm run build
 
 FROM nginx:alpine
+EXPOSE 80
 COPY nginx.conf /etc/nginx/nginx.conf
 RUN sed -i 's/PORT/$PORT/g' /etc/nginx/nginx.conf
 
